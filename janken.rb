@@ -1,4 +1,5 @@
 # プレイヤー(自分)に「0 ~ 2」を入力させるロジックを書きます。
+# require "byebug"
 class Player
   def hand
     # 「プレイヤーに 0 ~ 2を入力させる文章」を表示させます。
@@ -7,6 +8,7 @@ class Player
     # 変数「input_hand」にプレイヤーが入力したものを取得して代入します。
       # ヒント! 「getsメソッド」を使用します。
     input_hand = gets.to_i
+    # byebug
     # 「input_hand」(取得した値)が「0, 1, 2」のいずれかだとwhileから脱出させ、それ以外だと初めから繰り返させます。
       # ヒント! 「while」と「if」を使用します。
       # 以降の型の例に沿って実装しましょう ※実装する時場合はコメントアウトに注意しましょう
@@ -14,7 +16,7 @@ class Player
         if input_hand < 3
           return input_hand
         else
-          puts "もう一度数字を入力してください"
+          puts "0〜2の数字を入力してください。"
           puts "0:グー, 1:チョキ, 2:パー"
           input_hand = gets.to_i
         end
